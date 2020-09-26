@@ -1,0 +1,86 @@
+body{
+  background-color: #7474AE;
+  margin: 0;
+  margin-left:1vw;
+  margin-right:1vw;
+  font-family: 'Crimson Text', serif;
+}
+h1{
+  text-align: center;
+  font-size: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#buttonContainer{
+  display: flex;
+  justify-content: space-around;
+}
+#buttonContainer button{
+  border-radius: 20%;
+  border: none;
+  margin-bottom: 10px;
+}
+button{
+  background-color: #1C0221;
+  color: #ffffff;
+  padding: 20px 50px;
+  font-family: 'Crimson Text', serif;
+  font-size: 20px;
+}
+.slidercontainer{
+  float: right;
+  width: calc(90% - 800px);
+  max-width: 1000px;
+  margin-right: 0px;
+}
+.slidercontainer input{
+  float: inherit;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+.slidercontainer p{
+  margin: 0;
+  text-align: left;
+}
+#c{
+  text-align: center;
+}
+
+canvas{
+  border: 1px solid black; /*Provided by Professor Johnson*/
+  float: left;
+  margin-right: 20px;
+}
+
+/* Collapsible implementation from https://www.w3schools.com/howto/howto_js_collapsible.asp */
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  font-family: 'Crimson Text', serif;
+  background-color: #4B4B81;
+    color: #000000;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    margin-bottom: 10px;
+  }
+  
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  .active, .collapsible:hover {
+    background-color: #53538D;
+  }
+  
+  /* Style the collapsible content. Note: hidden by default */
+  .content {
+    font-family: 'Crimson Text', serif;
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #53538D;
+    text-align: center;
+    margin-bottom: 10px;
+  }

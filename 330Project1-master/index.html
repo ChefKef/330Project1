@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+    <title>Lorenz Mine Attack</title>
+    <link rel = "stylesheet" href = "styles/default-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&display=swap" rel="stylesheet">
+    <script src = "src/jjhLIB.js"></script>
+	  <script src = "src/index.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Mine Attack!</h1>
+    <button type="button" class="collapsible">Info/How to Play</button> <!--Collapseable text implementation from https://www.w3schools.com/howto/howto_js_collapsible.asp-->
+    <div class="content">
+      <h2>What is a Lorenz Attractor?</h2>
+      <p>According to Wolfram, "The Lorenz attractor is an attractor that arises in a simplified system of equations describing the two-dimensional flow of fluid of uniform depth H, with an imposed temperature difference DeltaT, under gravity g, with buoyancy alpha, thermal diffusivity kappa, and kinematic viscosity nu." The Lorenz attractor existed to attempt to better predict weather patterns.</p>
+      <h2>How to play</h2>
+      <p>You will harness the staggering mathematical complexity of a Lorenz Attractor to play a web browser game. Next to the game screen, there are controls you can use to alter the sytem. Changing the numberator and denominator of C will result in wildly different systems. Altering the X scale will make the system wider, thinner, or even mirrored vertically. The same goes for the Y scale, but in the up and down direction. To draw more dots along the curve, decreace dt. However, this will make the simulation slower, which you can circumvent by increacing the framerate.</p>
+    </div>
+  </header>
+  <main>
+    <canvas id="canvas"></canvas>
+    <section id="buttonContainer">
+      <button id="playButton">Play</button> <button id="pauseButton">Pause</button> <button id="stepButton">Step</button> <button id="restartButton">Restart</button> <button id="resetButton">Reset</button>
+    </section>
+    <div class="slidercontainer">
+      <input type = "range" min = "-20" max = "20" value = "8" class = "slider" id = "xSlider">
+        <p id = "xScale">X Scale: 8</p>
+        <input type = "range" min = "-20" max = "20" value = "8" class = "slider" id = "ySlider">
+        <p id = "yScale">Y Scale: 8</p>
+        <input type = "range" min = "0" max = "20" value = "8" class = "slider" id = "cNumerator">
+        <p id = "numerator">Numerator Value: 8</p>
+        <input type = "range" min = "0" max = "10" value = "3" class = "slider" id = "cDenominator">
+        <p id = "denominator">Denominator Value: 3</p>
+        <input type = "range" min = "1" max = "30" value = "10" class = "slider" id = "dtSlider">
+        <p id = "dt">dt: .01</p>
+        <p id = "c">Current c value: 8/3</p>
+    </div>
+    <label for="framerate">Framerate:</label>
+      <select name="framerate" id="framerate">
+          <option value="15">15</option>
+          <option value="30">30</option>
+          <option value="60" selected>60</option>
+          <option value="120">120</option>
+          <option value="180">180</option>
+          <option value="240">240</option>
+      </select>
+      <p id = "score">Score: 0</p>
+  </main>
+</body>
+</html>
